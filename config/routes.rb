@@ -5,4 +5,5 @@ Rails.application.routes.draw do
   resources :messages
   get "signup", to: 'sessions#new'
   resources :users, except: [:new]
+  resources :users
 end

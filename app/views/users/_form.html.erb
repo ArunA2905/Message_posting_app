@@ -1,5 +1,5 @@
 <%= render 'shared/errors', obj: @user %>
-<%= form_with(model: @user, local: true) do |f| %>
+<%= form_with(model: @user, local: true, data: { turbo: false }) do |f| %>
 
   <p>
     <%= f.label :username %><br/>
@@ -18,7 +18,7 @@
 
 
   <p>
-    <%= f.submit(@user.new_record? ? "Sign up" : "Update acount")  %>
+    <%= f.submit()  %>
   </p>
 
 <% end %>

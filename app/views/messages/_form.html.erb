@@ -1,0 +1,19 @@
+<% if @messages.errors.any? %>
+  <h2>The following errors prevented the message from being saved</h2>
+  <ul>
+    <% @messages.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+  </ul>
+<% end %>
+<%= form_with(model: @messages, local: true) do |f| %>
+
+  <p>
+    <%= f.label :message %><br/>
+    <%= f.text_field :message %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+
+<% end %>

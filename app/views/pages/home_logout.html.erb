@@ -1,0 +1,6 @@
+<h1>Welcome to Message Posting App</h1>
+
+<%= link_to 'Go to Message Inbox', messages_path %>
+<%= link_to 'Go to About', about_path %> <br/>
+
+<%= link_to 'Logout', destroy_user_session_path, data: { turbo_method: :delete } %>

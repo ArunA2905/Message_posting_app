@@ -3,6 +3,7 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   def show
+    #@message = User.eager_load(:messages).select("users.*, messages.*".find(params[:id]))
   end
 
   def index 
@@ -15,7 +16,7 @@ class MessagesController < ApplicationController
 
   def create 
      @messages = Message.new(message_params)
-     @messages.user = User.first
+     @messages.user_id = current_user.id
        if @messages.save
            flash[:notice] = "Message was created successfully."
            redirect_to messages_path

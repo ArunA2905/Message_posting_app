@@ -1,4 +1,6 @@
 <h1>Showing Message details</h1>
+
+by <%= @messages.user.username if @messages.user %>
 <p><strong>Message: </strong> <%= @messages.message %></p>
 <p><strong>Date&Time: </strong> <%= @messages.created_at %></p>
 

@@ -74,3 +74,6 @@ end
 
 gem 'devise'
 gem 'ajax-datatables-rails'
+gem 'activeadmin'
+gem 'sassc'
+

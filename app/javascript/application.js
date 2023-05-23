@@ -3,9 +3,19 @@ import "@hotwired/turbo-rails"
 import "controllers"
 
 import 'foundation-sites'
-import jquery from 'jquery'
-window.$ = jquery 
+
+import 'jquery'
+window.$ = jQuery 
+window.jquery = jQuery;
+
+// import "data-tables"
+
+$(document).ready( function ($) {
+  console.log("Hii")
+  $(document).foundation();
+} );
 
 $(document).ready( function () {
-  $(document).foundation();
+  console.log("Hii 2")
+  let table = new DataTable('#myTable');
 } );

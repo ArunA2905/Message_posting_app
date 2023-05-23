@@ -6,5 +6,7 @@ pin "@hotwired/stimulus", to: "stimulus.min.js", preload: true
 pin "@hotwired/stimulus-loading", to: "stimulus-loading.js", preload: true
 pin_all_from "app/javascript/controllers", under: "controllers"
 
-pin "jquery" # @3.7.0
+
 pin "foundation-sites" # @6.7.5
+pin "jquery", preload: true
+pin "data-tables", preload: true

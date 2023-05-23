@@ -1,11 +1,13 @@
-<h1 class="text-center">Users</h1>
+<h1 class="text-center">Users Details</h1>
 
 
 <table>
     <thead>
     <tr>
     <th>User Name</th>
-    <th colspan="2">Actions</th>
+    <th>Image</th>
+    <th>No of Articles</th>
+    <th colspan="1">Actions</th>
     </tr>
     </thead>
     <tbody>
@@ -14,8 +16,8 @@
         <td><%= link_to user.username, user %></td>
         <td><%= link_to gravatar_for(user, size: 150), user %></td>
             <td><%= pluralize(user.messages.count, "message") %></td>      
-            <td><%= link_to 'View Profile', user %></td>
-            <td><%= link_to 'Edit Profile', edit_user_path(user) %></td>
+            <td><%= link_to 'View Profile', user %> |
+            <%= link_to 'Edit Profile', edit_user_path(user) %></td>
         </tr>
         <% end %>
     </tbody>

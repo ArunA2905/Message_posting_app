@@ -1,14 +1,18 @@
-<h1>Showing Message details</h1>
-
+<h1 class="text-center">Showing Message details</h1>
+<p class="text-center">
 by <%= @messages.user.username if @messages.user %>
-<p><strong>Message: </strong> <%= @messages.message %></p>
-<p><strong>Date&Time: </strong> <%= @messages.created_at %></p>
+</p>
+
+<p class="text-center"><strong>Message: </strong> <%= @messages.message %></p>
+<p class="text-center"><strong>Date&Time: </strong> <%= @messages.created_at %></p>
+
+<p class="text-center">
+<td><%= link_to 'Edit a Message', edit_message_path(@messages) %></td> |
+<td><%= link_to 'Delete a Message', message_path(@messages), data: { turbo_method: :delete, turbo_confirm: "Are You Sure?" } %></td>
+</p>
 
 
-<td><%= link_to 'Edit a Message', edit_message_path(@messages) %></td>
-<td><%= link_to 'Delete a Message', message_path(@messages), data: { turbo_method: :delete, turbo_confirm: "Are You Sure?" } %></td>>
-
-<p>
+<p class="text-center">
 <%= link_to 'Return to Message Inbox', messages_path %>
 </p>
 

@@ -1,11 +1,12 @@
 class UsersController < ApplicationController 
   def show 
     @user = User.find(params[:id])
-    @messages = @user.articles.paginate(page: params[:page], per_page: 3) 
+    #@messages = @user.articles.paginate(page: params[:page], per_page: 3) 
 end
 
 def index
-    @users = User.paginate(page: params[:page], per_page: 3) 
+   @users = User.all
+    #@users = User.paginate(page: params[:page], per_page: 3) 
 end 
 
 

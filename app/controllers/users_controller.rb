@@ -38,6 +38,15 @@ def create
     end
 end
 
+def destroy
+    @user = current_user.users.find(params[:id])
+    if @user.destroy
+        redirect_to root_path
+    else 
+        flash[:notice] = "Logout not successfull"
+    end
+end
+
 private
 
 def user_params

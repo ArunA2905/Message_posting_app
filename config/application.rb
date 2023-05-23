@@ -11,6 +11,10 @@ module MessagePostingApp
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
 
+    config.assets.paths << Rails.root.join("javascript")
+    config.action_view.form_with_generates_remote_forms = true
+    config.action_dispatch.default_headers.merge!('Content-Type' => Mime[:turbo_stream].to_s)
+
     # Configuration for the application, engines, and railties goes here.
     #
     # These settings can be overridden in specific environments using the files

@@ -68,6 +68,9 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.4)
       public_suffix (>= 2.0.2, < 6.0)
+    ajax-datatables-rails (1.4.0)
+      rails (>= 5.2)
+      zeitwerk
     bcrypt (3.1.18)
     bindex (0.8.1)
     bootsnap (1.16.0)
@@ -156,6 +159,7 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.5.0)
       loofah (~> 2.19, >= 2.19.1)
+    rails_layout (1.0.42)
     railties (7.0.4.3)
       actionpack (= 7.0.4.3)
       activesupport (= 7.0.4.3)
@@ -214,6 +218,7 @@ PLATFORMS
   x86_64-darwin-22
 
 DEPENDENCIES
+  ajax-datatables-rails
   bootsnap
   capybara
   devise
@@ -222,6 +227,7 @@ DEPENDENCIES
   pg (~> 1.1)
   puma (~> 5.0)
   rails (~> 7.0.4, >= 7.0.4.3)
+  rails_layout
   selenium-webdriver
   sprockets-rails
   stimulus-rails

@@ -9,10 +9,11 @@
 
 <%= form_with(model: @messages, local: true) do |f| %>
 <div class="text-center">
-  <p  >
-    <%= f.label :message %><br/>
+  <h1>
+    <%= f.label :message %>
+  </h1>
     <%= f.text_area :message %>
-  </p>
+  
   
   <p class="text-center">
     <%= f.submit %>

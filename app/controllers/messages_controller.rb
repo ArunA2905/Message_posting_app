@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
   before_action :set_message, only: [:show, :edit, :update, :destroy]
 
   def show
-    #@message = User.eager_load(:messages).select("users.*, messages.*".find(params[:id]))
   end
 
   def index 

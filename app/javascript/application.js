@@ -2,20 +2,19 @@
 import "@hotwired/turbo-rails"
 import "controllers"
 
-import 'foundation-sites'
-
 import 'jquery'
 window.$ = jQuery 
 window.jquery = jQuery;
 
-// import "data-tables"
+import 'foundation-sites'
+
+
+import "data-tables"
 
 $(document).ready( function ($) {
-  console.log("Hii")
   $(document).foundation();
 } );
 
 $(document).ready( function () {
-  console.log("Hii 2")
   let table = new DataTable('#myTable');
 } );
